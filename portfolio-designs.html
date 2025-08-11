@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fajar Hermawan - Desain Portfolio</title>
+  <!-- Link untuk Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Tailwind CSS dari CDN, versi terbaru -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Animasi Fade In Up */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0; /* Pastikan elemen tersembunyi sebelum animasi dimulai */
+    }
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+    .delay-300 {
+      animation-delay: 0.3s;
+    }
+
+    /* Container gambar supaya gambar muat full dan centered */
+    .img-container {
+      width: 100%;
+      height: 400px; /* tinggi maksimal container */
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-top-left-radius: 1.5rem;  /* rounded-3xl setara 24px */
+      border-top-right-radius: 1.5rem;
+    }
+    .img-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; /* full gambar tanpa crop */
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100 min-h-screen">
+
+  <!-- HEADER -->
+  <header
+    class="bg-gradient-to-r from-indigo-800 to-blue-800 p-8 mb-12 text-center rounded-b-3xl shadow-2xl animate-fadeInUp"
+  >
+    <h1
+      class="text-4xl lg:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg"
+    >
+      Desain Portfolio Membangun Website
+    </h1>
+    <p class="mt-4 max-w-4xl mx-auto text-gray-200 text-base lg:text-lg leading-relaxed">
+      Berikut ini adalah desain mockup dan proyek terkait website portfolio saya.
+      Desain ini dibuat menggunakan tools modern untuk menghasilkan tampilan yang responsif dan profesional.
+    </p>
+  </header>
+
+  <!-- MAIN CONTENT: GRID PROYEK -->
+  <main
+    class="container mx-auto px-6 grid gap-10 md:grid-cols-2 animate-fadeInUp delay-100"
+  >
+    <!-- Proyek 1: Full-Stack Project -->
+    <div
+      class="bg-gray-900 rounded-3xl shadow-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500"
+    >
+      <div class="img-container">
+        <img
+          src="assets/img/Screenshot_11-8-2025_181342_localhost.jpeg"
+          onerror="this.onerror=null;this.src='https://placehold.co/800x600/273a5a/ffffff?text=PROYEK+FULL-STACK';"
+          alt="Proyek Full-Stack"
+        />
+      </div>
+      <div class="p-6 md:p-8">
+        <h2 class="text-2xl font-bold mb-3 text-blue-400">
+          Aplikasi Manajemen Data
+        </h2>
+        <p class="text-gray-300 mb-4 leading-relaxed text-justify">
+          Proyek ini merupakan aplikasi web lengkap yang dibangun dengan tumpukan
+          teknologi modern. Proyek ini menampilkan manajemen data dengan otentikasi pengguna,
+          unggah gambar, dan tampilan dinamis.
+        </p>
+        <div class="mt-4">
+          <h3 class="font-bold text-lg text-white mb-2">
+            Teknologi yang Digunakan:
+          </h3>
+          <ul class="list-disc list-inside space-y-1 text-gray-400 text-sm">
+            <li>Express.js (Node.js) - Backend Framework</li>
+            <li>PostgreSQL - Database relasional</li>
+            <li>Handlebars (HBS) - Template Engine</li>
+            <li>Railway - Cloud Hosting</li>
+            <li>bcryptjs + express-session - Sistem Login</li>
+            <li>Multer - Mengunggah gambar</li>
+            <li>TailwindCSS - Styling Modern</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyek 2: HTML & Tailwind CSS -->
+    <div
+      class="bg-gray-900 rounded-3xl shadow-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 animate-fadeInUp delay-200"
+    >
+      <div class="img-container">
+        <img
+          src="assets/img/Screenshot_11-8-2025_181016_fajarhermawann.netlify.app.jpeg"
+          onerror="this.onerror=null;this.src='https://placehold.co/800x600/1f2937/fff?text=PROYEK+FRONT-END';"
+          alt="Proyek Front-End"
+        />
+      </div>
+      <div class="p-6 md:p-8">
+        <h2 class="text-2xl font-bold mb-3 text-blue-400">
+          Website Portofolio Responsif
+        </h2>
+        <p class="text-gray-300 mb-4 leading-relaxed text-justify">
+          Proyek ini adalah halaman web statis yang berfokus pada desain antarmuka
+          pengguna (UI) dan pengalaman pengguna (UX) yang menarik. Dibuat murni
+          menggunakan <strong>HTML</strong> dan <strong>Tailwind CSS</strong>, memastikan
+          desain yang bersih, responsif, dan mudah dikelola.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- SEKSI TENTANG DESAIN DAN TOOLS -->
+  <section
+    class="max-w-4xl mx-auto mt-20 mb-16 px-6 animate-fadeInUp delay-300"
+  >
+    <hr class="border-t-2 border-gray-700 mb-8" />
+    <h3 class="text-3xl font-bold mb-6 text-center text-white">
+      Tentang Proyek dan Tools
+    </h3>
+    <article
+      class="prose prose-invert max-w-full mx-auto text-justify text-gray-300"
+    >
+      <p>
+        Saya mengimplementasikan desain proyek-proyek saya ke dalam kode menggunakan
+        <strong>VS Code</strong> sebagai code editor. Untuk proyek-proyek front-end,
+        saya menggunakan <strong>HTML</strong> dan <strong>Tailwind CSS</strong> untuk
+        menciptakan tampilan yang modern dan responsif.
+      </p>
+      <p>
+        Sementara itu, untuk proyek full-stack, saya menggabungkan berbagai teknologi.
+        Backend-nya dibangun dengan <strong>Express.js</strong>, dengan
+        <strong>PostgreSQL</strong> sebagai database. Tampilan dinamis dihasilkan oleh
+        <strong>Handlebars (HBS)</strong>. Saya juga menerapkan sistem login yang aman
+        dengan <strong>bcryptjs</strong> dan <strong>express-session</strong> serta fitur
+        unggah gambar menggunakan <strong>Multer</strong>. Proyek ini di-hosting di
+        <strong>Railway</strong>.
+      </p>
+      <p>
+        Dengan pendekatan ini, saya dapat menunjukkan kemampuan saya dalam membangun aplikasi
+        web yang komprehensif, dari front-end hingga back-end, serta pemahaman saya dalam
+        menggunakan berbagai tool dan framework.
+      </p>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    class="text-center text-gray-500 text-sm py-6 border-t border-gray-800 animate-fadeInUp delay-300"
+  >
+    &copy; 2025 Fajar Hermawan. Semua hak cipta dilindungi.
+  </footer>
+</body>
+</html>
