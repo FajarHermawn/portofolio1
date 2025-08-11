@@ -37,21 +37,4 @@ Proyek PKM yang membangun 20 titik PJU. Saya berkontribusi dalam pembuatan propo
 
 ---
 
-## 📈 Statistik GitHub
-
-![Statistik GitHub saya](https://github-readme-stats.vercel.app/api?username=your-github-username&show_icons=true&theme=radical)
-
----
-
-## 📞 Kontak Saya
-
-- 📧 Email: [fajarhermawan092001@gmail.com](mailto:fajarhermawan092001@gmail.com)
-- 📱 WhatsApp: [Hubungi Saya](https://wa.me/6281574879962)
 - 🌐 Website: [fajarhermawann.netlify.app](https://fajarhermawann.netlify.app/)
-- 🔗 GitHub: [github.com/your-github-username](https://github.com/your-github-username)
-- 📷 Instagram: [instagram.com/your-instagram](https://instagram.com/your-instagram)
-
----
-
-Terima kasih telah mengunjungi portofolio saya!  
-Mari kita bangun sesuatu yang luar biasa bersama 🚀
