@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fajar Hermawan — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- favicon (ganti file sesuai) -->
+  <link rel="icon" href="assets/img/favicon.ico" />
+
+  <style>
+    :root{
+      --grad-from: #3b82f6;   /* blue-500 */
+      --grad-to:   #6366f1;   /* indigo-500 */
+    }
+    body{ font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    /* small custom */
+   .skill-card { 
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* sudah ada di class p-4, ini optional */
+  min-width: 120px;
+  height: 140px; /* kasih tinggi tetap agar logo dan teks tetap di tengah */
+}
+
+    /* simple fade-up */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity:1; transform: none; } }
+    .fade-up { animation: fadeUp 0.6s ease forwards; }
+    .fade-up.delay-100 { animation-delay: .08s; }
+    .fade-up.delay-200 { animation-delay: .16s; }
+    .fade-up.delay-300 { animation-delay: .24s; }
+    /* header backdrop */
+    .backdrop { background: linear-gradient(90deg, rgba(59,130,246,0.10), rgba(99,102,241,0.06)); }
+    /* small helper for timeline dot */
+    .timeline-dot { width: 14px; height: 14px; border-radius: 9999px; background: linear-gradient(90deg,var(--grad-from),var(--grad-to)); box-shadow: 0 4px 12px rgba(99,102,241,0.2); }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- HEADER -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="backdrop header-blur bg-opacity-60 backdrop-blur-sm">
+      <div class="container mx-auto px-5 py-4 flex items-center justify-between">
+        <a href="#" class="inline-flex items-center gap-3">
+          <span class="bg-white text-gray-900 font-bold px-3 py-1 rounded-full shadow" style="letter-spacing:.06em">FH</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#about" class="text-gray-300 hover:text-white transition">Tentang</a>
+          <a href="#skills" class="text-gray-300 hover:text-white transition">Keahlian</a>
+          <a href="#projects" class="text-gray-300 hover:text-white transition">Proyek</a>
+          <a href="#education" class="text-gray-300 hover:text-white transition">Pendidikan & Pengalaman</a>
+          <a href="#contact" class="text-gray-300 hover:text-white transition">Kontak</a>
+
+          <a href="https://wa.me/62895331438446" target="_blank" 
+             class="ml-2 bg-gradient-to-r from-[var(--grad-from)] to-[var(--grad-to)] text-white px-4 py-2 rounded-full font-semibold shadow hover:opacity-95 transition">
+             Hubungi Saya
+          </a>
+
+          <a href="pkm.html" class="ml-2 bg-gray-800 text-white px-4 py-2 rounded-md text-sm">Sertifikat PKM</a>
+        </nav>
+
+        <!-- mobile toggle -->
+        <button id="menu-toggle" class="md:hidden text-gray-200" aria-label="Buka menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800">
+        <div class="px-5 py-4 space-y-3">
+          <a href="#about" class="block text-gray-300">Tentang</a>
+          <a href="#skills" class="block text-gray-300">Keahlian</a>
+          <a href="#projects" class="block text-gray-300">Proyek</a>
+          <a href="#education" class="block text-gray-300">Pendidikan & Pengalaman</a>
+          <a href="#contact" class="block text-gray-300">Kontak</a>
+          <a href="https://wa.me/62895331438446" target="_blank" class="block bg-blue-600 text-white text-center py-2 rounded-full">Hubungi Saya</a>
+          <a href="pkm.html" class="block bg-gray-800 text-white text-center py-2 rounded-md mt-1">Sertifikat PKM</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28">
+
+    <!-- HERO / ABOUT -->
+    <section id="about" class="py-16">
+      <div class="container mx-auto px-6 lg:px-10 flex flex-col-reverse lg:flex-row items-center gap-10">
+        <div class="w-full lg:w-2/3 text-center lg:text-left fade-up">
+          <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[var(--grad-from)] to-[var(--grad-to)]">Fajar Hermawan</h1>
+          <p class="mt-3 text-lg text-gray-300 font-medium">Full-Stack Developer • Teknik Elektro (Unpam) • Marketing/Admin experience</p>
+
+          <p class="mt-6 text-gray-400 max-w-2xl">
+            Individu proaktif dan cepat belajar dengan pengalaman di administrasi marketplace, marketing perbankan, serta kewirausahaan.
+            Saat ini fokus mengembangkan keahlian di bidang web development dan Internet of Things (IoT) untuk solusi praktis.
+            Siap berkontribusi di posisi entry-level atau proyek freelance.
+          </p>
+
+          <div class="mt-6 flex flex-col sm:flex-row items-center gap-3">
+            <a href="assets/docs/CV Fajar Hermawan.pdf" target="_blank" class="inline-flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-md font-semibold shadow hover:opacity-95">
+              Download CV
+            </a>
+            <a href="https://wa.me/62895331438446" target="_blank"
+               class="inline-flex items-center gap-2 border border-gray-700 px-4 py-2 rounded-md text-gray-200 hover:bg-gray-800 hover:border-green-500 transition-colors duration-300">
+              <img src="assets/img/logo-whatsapp-png-46041.png" alt="WhatsApp" class="w-5 h-5 object-contain">
+              <span>Let's Talk</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-1/3 flex justify-center lg:justify-end">
+          <div class="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition">
+            <img src="assets/img/fajar.JPG" alt="Fajar Hermawan" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS / TECH STACK -->
+    <section id="skills" class="py-12 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-10">
+          <h3 class="text-sm text-blue-300 uppercase tracking-widest">Keahlian</h3>
+          <h2 class="text-3xl font-extrabold mt-2">Tech Stack & Tools</h2>
+        </div>
+
+        <!-- marquee-like scroll (horizontal) -->
+        <div class="overflow-hidden">
+          <div id="tech-scroll" class="flex gap-6 py-4 justify-center">
+            <!-- Replikasi card; ganti logo_path ke file nyata -->
+        <div class="skill-card p-4 rounded-2xl min-w-[120px] flex flex-col items-center justify-center text-center">
+              <img src="assets/img/html.png" alt="HTML5" class="mx-auto w-14 h-14 mb-3">
+              <div class="font-semibold">HTML5</div>
+            </div>
+
+            <div class="skill-card p-4 rounded-2xl min-w-[120px] text-center">
+              <img src="assets/img/css-3.png" alt="CSS3" class="mx-auto w-14 h-14 mb-3">
+              <div class="font-semibold">CSS3</div>
+            </div>
+
+            <div class="skill-card p-4 rounded-2xl min-w-[120px] text-center">
+              <img src="assets/img/java-script.png" alt="JS" class="mx-auto w-14 h-14 mb-3">
+              <div class="font-semibold">JavaScript</div>
+            </div>
+
+            <div class="skill-card p-4 rounded-2xl min-w-[120px] text-center">
+              <img src="assets/img/php-programming-language.png" alt="PHP" class="mx-auto w-14 h-14 mb-3">
+              <div class="font-semibold">PHP</div>
+            </div>
+
+            <div class="skill-card p-4 rounded-2xl min-w-[120px] text-center">
+              <img src="assets/img/pngwing.com.png" alt="Tailwind" class="mx-auto w-14 h-14 mb-3">
+              <div class="font-semibold">Tailwind CSS</div>
+            </div>
+
+            <div class="skill-card p-4 rounded-2xl min-w-[120px] text-center">
+              <img src="assets/img/postgre.png" alt="Postgres" class="mx-auto w-14 h-14 mb-3">
+              <div class="font-semibold">PostgreSQL</div>
+            </div>
+
+            <div class="skill-card p-4 rounded-2xl min-w-[120px] text-center">
+              <img src="assets/img/pngwing.com (1).png" alt="Arduino" class="mx-auto w-14 h-14 mb-3">
+              <div class="font-semibold">Arduino</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & EXPERIENCE TIMELINE -->
+    <section id="education" class="py-16 bg-gray-900">
+      <div class="container mx-auto px-6 lg:px-10">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Education -->
+          <div class="fade-up">
+            <h3 class="text-sm text-blue-300 uppercase">Education</h3>
+            <h2 class="text-2xl font-bold mt-2 mb-6">Riwayat Pendidikan</h2>
+
+            <div class="relative border-l-4 border-gray-700 pl-8 space-y-8">
+              <div class="relative">
+                <div class="timeline-dot absolute -left-7 top-1"></div>
+                <h4 class="font-semibold text-lg">Universitas Pamulang</h4>
+                <p class="text-sm text-gray-400">Teknik Elektro — Semester 6 (2023 — sekarang)</p>
+              </div>
+
+              <div class="relative">
+                <div class="timeline-dot absolute -left-7 top-1"></div>
+                <h4 class="font-semibold text-lg">SMA YASPEN TUGU IBU 1</h4>
+                <p class="text-sm text-gray-400">IPS (2016 — 2019)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div class="fade-up delay-100">
+            <h3 class="text-sm text-blue-300 uppercase">Experience</h3>
+            <h2 class="text-2xl font-bold mt-2 mb-6">Pengalaman Kerja</h2>
+
+            <div class="relative border-l-4 border-gray-700 pl-8 space-y-8">
+              <div class="relative">
+                <div class="timeline-dot absolute -left-7 top-1"></div>
+                <h4 class="font-semibold text-lg">PT Vahana Gasti Teknika</h4>
+                <p class="text-sm text-gray-400">Warehouse Staff — Sep 2024 – Nov 2024</p>
+                <ul class="list-disc ml-5 mt-2 text-gray-300 text-sm">
+                  <li>Merakit pesanan pelanggan (router boxes).</li>
+                  <li>Mengelola proses pengiriman dan packing agar aman.</li>
+                  <li>Mencapai target harian dan bulanan.</li>
+                </ul>
+              </div>
+
+              <div class="relative">
+                <div class="timeline-dot absolute -left-7 top-1"></div>
+                <h4 class="font-semibold text-lg">Bank Central Asia (BCA)</h4>
+                <p class="text-sm text-gray-400">Banking Marketing Staff — Sep 2023 – Jul 2024</p>
+                <ul class="list-disc ml-5 mt-2 text-gray-300 text-sm">
+                  <li>Memasarkan produk perbankan dan membantu pembukaan rekening.</li>
+                  <li>Mencapai target penjualan harian dan mengelola data nasabah.</li>
+                </ul>
+              </div>
+
+              <div class="relative">
+                <div class="timeline-dot absolute -left-7 top-1"></div>
+                <h4 class="font-semibold text-lg">Waryulion Fashion / Jarvis Fashion</h4>
+                <p class="text-sm text-gray-400">Marketplace Admin & Owner — 2020 – 2023</p>
+                <ul class="list-disc ml-5 mt-2 text-gray-300 text-sm">
+                  <li>Mengunggah dan mengoptimasi produk di Shopee, Tokopedia, dan Lazada.</li>
+                  <li>Mengelola supplier, stok, promosi, dan pengiriman.</li>
+                  <li>Menyusun strategi pemasaran online dan offline.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / MY WORK -->
+    <section id="projects" class="py-16 bg-gray-800">
+      <div class="container mx-auto px-6 lg:px-10">
+        <div class="text-center mb-10">
+          <h3 class="text-sm text-blue-300 uppercase">My Work</h3>
+          <h2 class="text-3xl font-extrabold mt-2">Proyek Unggulan</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project 1 -->
+          <article class="group rounded-2xl overflow-hidden bg-gray-700 shadow-lg hover:scale-[1.02] transition-transform">
+            <div class="bg-black flex items-center justify-center overflow-hidden" style="height: 200px;">
+              <img src="assets/img/bluetooth controler.jpg" 
+                   alt="Building Portfolio Website" 
+                   class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <h4 class="text-xl font-bold text-white">Membangun Website Portfolio</h4>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">
+                Website portfolio interaktif yang menampilkan data secara dinamis,
+                menggunakan kombinasi HTML, CSS, JavaScript, dan Tailwind CSS untuk tampilan modern.
+                Fokus pada desain responsif dan pengalaman pengguna yang optimal.
+              </p>
+              <div class="mt-4">
+                <a href="#" 
+                   class="inline-block px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition">
+                  Lihat Detail
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="group rounded-2xl overflow-hidden bg-gray-700 shadow-lg">
+            <img src="assets/img/WhatsApp Image 2024-12-08 at 18.18.11.jpeg" alt="PJU Project" class="w-full h-48 object-cover">
+            <div class="p-5">
+              <h4 class="text-xl font-bold">Instalasi Penerangan Jalan Umum (PKM)</h4>
+              <p class="mt-2 text-sm text-gray-300">PKM: membangun 20 titik PJU — saya bantu proposal & desain banner.</p>
+              <div class="mt-4">
+                <a href="pkm.html" class="inline-block px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition">Sertifikat PKM</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="group rounded-2xl overflow-hidden bg-gray-700 shadow-lg hover:scale-[1.02] transition-transform">
+            <div class="bg-black flex items-center justify-center overflow-hidden" style="height: 200px;">
+              <img src="assets/img/WhatsApp Image 2025-06-29 at 19.25.22 (1).jpeg" 
+                   alt="Auto Watering System" 
+                   class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="p-5">
+              <h4 class="text-xl font-bold text-white">Auto Watering System</h4>
+              <p class="mt-2 text-sm text-gray-300 leading-relaxed">
+                Sistem penyiraman tanaman otomatis berbasis IoT yang menggunakan sensor kelembaban tanah,
+                modul relay, dan mikrokontroler untuk mengatur suplai air secara efisien.
+                Didesain untuk menghemat waktu, tenaga, dan penggunaan air.
+              </p>
+              <div class="mt-4">
+                <a href="https://github.com/FajarHermawn/auto-watering-fotosintesis" 
+                   class="inline-block px-4 py-2 border border-white rounded-full text-sm hover:bg-white hover:text-black transition" target="_blank" rel="noopener noreferrer">
+                  Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-gray-800">
+      <div class="container mx-auto px-6">
+        <h3 class="text-center text-blue-400 uppercase font-semibold mb-2">Hubungi Saya</h3>
+        <h2 class="text-4xl font-extrabold text-center mb-12">Kontak Saya</h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <form action="https://formspree.io/f/mpwqolww" method="POST" class="bg-gray-900 p-6 rounded shadow space-y-4">
+            <input type="text" name="name" placeholder="Nama" required class="w-full p-3 bg-gray-800 border border-gray-700 rounded">
+            <input type="email" name="email" placeholder="Email" required class="w-full p-3 bg-gray-800 border border-gray-700 rounded">
+            <textarea name="message" rows="5" placeholder="Pesan" required class="w-full p-3 bg-gray-800 border border-gray-700 rounded"></textarea>
+            <button type="submit" class="w-full bg-blue-600 py-3 rounded font-bold hover:bg-blue-700">Kirim</button>
+          </form>
+
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-bold">Alamat</h4>
+              <p class="text-gray-400">12370 Bangka, Pancoran, Jakarta Selatan</p>
+            </div>
+            <div>
+              <h4 class="font-bold">Telepon</h4>
+              <p class="text-gray-400">(+62) 815-7487-9962</p>
+            </div>
+            <div>
+              <h4 class="font-bold">Email</h4>
+              <p class="text-gray-400">fajarhermawan092001@gmail.com</p>
+            </div>
+
+            <div>
+              <h4 class="font-bold">Sosial Media</h4>
+              <div class="flex gap-4 mt-2">
+                <a href="https://instagram.com/username_ig" target="_blank" aria-label="Instagram" class="hover:text-white transition-colors" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/FajarHermawn" target="_blank" aria-label="GitHub" class="hover:text-white transition-colors" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                    <path d="M12 2C6.477 2 2 6.485 2 12.017c0 4.425 2.865 8.185 6.839 9.51.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.37-1.342-3.37-1.342-.454-1.157-1.11-1.466-1.11-1.466-.908-.62.07-.607.07-.607 1.004.07 1.532 1.032 1.532 1.032.892 1.528 2.341 1.087 2.91.831.092-.647.35-1.086.636-1.337-2.22-.253-4.555-1.112-4.555-4.945 0-1.091.39-1.984 1.029-2.683-.103-.254-.446-1.274.098-2.656 0 0 .84-.27 2.75 1.025A9.58 9.58 0 0112 6.844c.85.004 1.705.115 2.504.338 1.909-1.294 2.748-1.025 2.748-1.025.546 1.382.202 2.402.1 2.656.64.7 1.028 1.592 1.028 2.683 0 3.842-2.337 4.688-4.565 4.937.359.31.678.92.678 1.854 0 1.337-.012 2.417-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0022 12.017C22 6.485 17.523 2 12 2z"/>
+                  </svg>
+                </a>
+                <a href="mailto:fajarhermawan092001@gmail.com" aria-label="Email" class="hover:text-white transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                    <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4v-9l8 6 8-6v9z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 text-gray-400 text-center py-6">
+      <p>&copy; 2025 Fajar Hermawan - All Rights Reserved</p>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
