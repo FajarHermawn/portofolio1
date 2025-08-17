@@ -1,119 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fajar Hermawan - Portfolio Design</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-gray-200 min-h-screen font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Detail - Fajar's Portfolio</title>
 
-  <!-- Header -->
-  <header class="bg-gray-800 p-10 md:p-16 text-center shadow-md">
-    <div class="container mx-auto max-w-5xl">
-      <h1 class="text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-        Portfolio & Projects
-      </h1>
-      <p class="mt-4 max-w-4xl mx-auto text-gray-300 text-base lg:text-lg leading-relaxed">
-        A collection of design mockups and detailed projects that I have built.  
-        I focus on clean, responsive, and functional designs using modern tools and technologies.
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-inter">
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-b from-gray-100 to-gray-50 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Personal Portfolio Website
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        This page showcases a detailed overview of my portfolio project built with 
+        <span class="font-semibold">HTML, CSS, and JavaScript</span>.
       </p>
-    </div>
-  </header>
+    </section>
 
-  <!-- Projects -->
-  <main class="container mx-auto px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-    
-    <!-- Project 1 -->
-    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
-      <div class="relative w-full h-64 overflow-hidden">
-        <img
-          src="assets/img/Screenshot_11-8-2025_181342_localhost.jpeg"
-          onerror="this.onerror=null;this.src='https://placehold.co/800x600/1e293b/d1d5db?text=DATA+MANAGEMENT+APP';"
-          alt="Data Management Application"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-gray-900/50"></div>
-      </div>
-      <div class="p-6">
-        <h2 class="text-xl font-bold mb-3 text-blue-400">Data Management Application</h2>
-        <p class="text-gray-400 mb-4 leading-relaxed text-sm text-justify">
-          A full-stack web application built with a modern technology stack.  
-          Includes user authentication, image upload, and dynamic data management.
-        </p>
-        <div class="mt-4">
-          <h3 class="font-bold text-gray-300 text-sm mb-2">Technologies Used:</h3>
-          <ul class="list-disc list-inside space-y-1 text-gray-400 text-xs">
-            <li>Express.js (Node.js) - Backend Framework</li>
-            <li>PostgreSQL - Relational Database</li>
-            <li>Handlebars (HBS) - Template Engine</li>
-            <li>bcryptjs + express-session - Authentication</li>
-            <li>Multer - Image Upload</li>
-            <li>TailwindCSS - Modern Styling</li>
-          </ul>
+    <!-- Project Detail -->
+    <section
+      id="detail"
+      class="max-w-6xl mx-auto py-12 px-6 grid md:grid-cols-2 gap-12 items-center"
+    >
+      <!-- Mockup -->
+      <div data-aos="fade-right">
+        <div class="bg-gray-900 rounded-2xl shadow-2xl p-4">
+          <div class="bg-gray-800 rounded-t-xl flex items-center px-3 py-2 space-x-2">
+            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+          </div>
+          <img
+            src="assets/img/Screenshot_11-8-2025_181342_localhost.jpeg"
+            alt="Website Preview"
+            class="rounded-b-xl border-t border-gray-700"
+          />
         </div>
       </div>
-    </div>
 
-    <!-- Project 2 -->
-    <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
-      <div class="relative w-full h-64 overflow-hidden">
-        <img
-          src="assets/img/Screenshot_11-8-2025_181016_fajarhermawann.netlify.app.jpeg"
-          onerror="this.onerror=null;this.src='https://placehold.co/800x600/1e293b/d1d5db?text=RESPONSIVE+PORTFOLIO+SITE';"
-          alt="Responsive Portfolio Website"
-          class="absolute inset-0 w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-gray-900/50"></div>
+      <!-- Project Info -->
+      <div data-aos="fade-left">
+        <h3 class="text-3xl font-semibold mb-4">About the Project</h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          This <strong>personal portfolio website</strong> highlights my skills, 
+          work experience, and projects in a modern and interactive way. 
+          The design is kept clean and minimalistic for better user experience.
+        </p>
+        <ul class="list-disc pl-5 text-gray-700 mb-6 space-y-1">
+          <li>Express.js (Node.js)</li>
+          <li>PostgreSQL (Database)</li>
+          <li>Handlebars (HBS) – Template Engine</li>
+          <li>bcryptjs + express-session – Authentication</li>
+          <li>Multer – Image Upload</li>
+          <li>TailwindCSS – Modern Styling</li>
+        </ul>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="https://github.com/FajarHermawn/final-taskdw"
+            target="_blank"
+            class="px-6 py-3 rounded-xl bg-blue-600 text-white shadow hover:bg-blue-700 transition"
+          >
+            🌐 View Repository
+          </a>
+          <a
+            href="index.html"
+            class="px-6 py-3 rounded-xl bg-gray-200 text-gray-800 shadow hover:bg-gray-300 transition"
+          >
+            ⬅ Back to Portfolio
+          </a>
+        </div>
       </div>
-      <div class="p-6">
-        <h2 class="text-xl font-bold mb-3 text-blue-400">Responsive Portfolio Website</h2>
-        <p class="text-gray-400 mb-4 leading-relaxed text-sm text-justify">
-          A static portfolio site focused on user interface (UI) and user experience (UX) design.  
-          Built entirely with HTML and TailwindCSS, ensuring a clean, responsive, and easy-to-maintain layout.
-        </p>
-      </div>
-    </div>
+    </section>
 
-  </main>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+      <p>© 2025 Fajar Hermawan. All rights reserved.</p>
+    </footer>
 
-  <!-- About Project & Tools -->
-  <section class="max-w-4xl mx-auto mt-10 mb-16 px-6">
-    <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-      <h3 class="text-3xl font-bold mb-6 text-center text-blue-400">About the Projects & Tools</h3>
-      <article class="prose max-w-full mx-auto text-justify text-gray-400">
-        <p>
-          I implement my project designs into real code using <span class="text-gray-200">VS Code</span> as the primary editor.  
-          For front-end projects, I use <span class="text-gray-200">HTML</span> and <span class="text-gray-200">TailwindCSS</span>  
-          to create modern and responsive interfaces.
-        </p>
-        <p>
-          For full-stack projects, I integrate various technologies.  
-          The backend is built with <span class="text-gray-200">Express.js</span>,  
-          while <span class="text-gray-200">PostgreSQL</span> serves as the database.  
-          Dynamic rendering is powered by <span class="text-gray-200">Handlebars (HBS)</span>.  
-          Secure login is implemented with <span class="text-gray-200">bcryptjs</span> and <span class="text-gray-200">express-session</span>,  
-          and image upload is handled by <span class="text-gray-200">Multer</span>.  
-          The project is hosted on <span class="text-gray-200">Railway</span>.
-        </p>
-        <p>
-          This approach demonstrates my ability to build complete web applications from front-end to back-end,  
-          and my understanding of different tools and frameworks.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-700">
-    <p>&copy; 2025 Fajar Hermawan. All rights reserved.</p>
-  </footer>
-
-</body>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
+  </body>
 </html>
