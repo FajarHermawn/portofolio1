@@ -1,11 +1,120 @@
+/* Custom CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
-/* Animasi scrolling horizontal */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1A1A1A; /* Warna latar belakang profesional */
+    color: #E8E8E8; /* Warna teks utama */
+}
+
+/* Header */
+.header-blur {
+    background-color: rgba(26, 26, 26, 0.7); /* Latar belakang header semi-transparan */
+    backdrop-filter: blur(10px);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #4A90E2; /* Biru elektrik sebagai warna aksen */
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3b74c4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(74, 144, 226, 0.3);
+}
+
+.btn-outline {
+    border: 2px solid #4A90E2;
+    color: #4A90E2;
+    font-weight: 600;
+}
+
+.btn-outline:hover {
+    background-color: rgba(74, 144, 226, 0.1);
+    color: white;
+}
+
+/* Gradients */
+.heading-gradient {
+    background: linear-gradient(90deg, #4A90E2, #7ED321);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Alternatif untuk text-fill-color */
+}
+
+/* Card Styling */
+.card {
+    background-color: #262626; /* Warna latar belakang kartu */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline */
+.timeline-dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: #4A90E2; /* Warna aksen pada timeline */
+    border-radius: 50%;
+    border: 3px solid #1A1A1A;
+}
+
+/* Aurora Divider */
+.aurora-divider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.5;
+}
+
+/* Skill Card */
+.skill-card {
+    min-width: 120px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    background-color: #262626;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background-color: #333333;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes scroll-tech {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .animate-scroll {
-  display: flex;
-  animation: scroll 15s linear infinite;
+    animation: scroll-tech 30s linear infinite;
+    width: max-content;
+    will-change: transform;
+}
+
+/* Eyebrow */
+.eyebrow {
+    color: #4A90E2;
 }
